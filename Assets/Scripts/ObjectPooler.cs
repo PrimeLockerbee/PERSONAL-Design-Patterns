@@ -28,6 +28,7 @@ public class ObjectPooler : MonoBehaviour
     pooledObjects = new List<GameObject>();
     foreach (ObjectPoolEnemy item in enemiesToPool) 
     {
+      //Instantiates pooled objects
       for (int i = 0; i < item.amountToPool; i++) 
       {
         GameObject obj = (GameObject)Instantiate(item.objectToPool);
@@ -50,6 +51,7 @@ public class ObjectPooler : MonoBehaviour
     {
       if (enemy.objectToPool.tag == tag) 
       {
+        //Allows the pool to expand if needed
         if (enemy.shouldExpand) 
         {
           GameObject obj = (GameObject)Instantiate(enemy.objectToPool);

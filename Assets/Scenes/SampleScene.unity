@@ -324,14 +324,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.17128946, y: -0, z: -0, w: 0.98522073}
+  m_LocalPosition: {x: 0, y: 8.5, z: -22.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 19.726, y: 0, z: 0}
 --- !u!1 &1162518678
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,7 +396,7 @@ MonoBehaviour:
   enemiesToPool:
   - objectToPool: {fileID: 7051497701205827446, guid: 14f7d1207706f3040a0a85c04125f740, type: 3}
     amountToPool: 4
-    shouldExpand: 0
+    shouldExpand: 1
   - objectToPool: {fileID: 7051497701205827446, guid: b172673ae618c02408f86821ccd652a2, type: 3}
     amountToPool: 8
     shouldExpand: 0
