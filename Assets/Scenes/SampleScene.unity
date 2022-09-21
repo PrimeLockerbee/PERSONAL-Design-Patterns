@@ -436,11 +436,9 @@ MonoBehaviour:
   go_SpawnPointYellow: {fileID: 662321525}
   waves:
   - name: Wave 1
-    count: 1
-    rate: 80
+    count: 5
   - name: Wave 2
     count: 6
-    rate: 1
   timeBetweenWaves: 5
   waveCountdown: 0
 --- !u!1 &1667548216

@@ -8,7 +8,7 @@ public class RedEnemy : MonoBehaviour
 
     void Update()
     {
-        //StartCoroutine(SetInactive(sec));
+        StartCoroutine(SetInactive(sec));
     }
 
     IEnumerator SetInactive(float seconds)

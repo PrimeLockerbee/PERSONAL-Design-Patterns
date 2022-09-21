@@ -9,7 +9,6 @@ public class WaveSpawner : MonoBehaviour
     {
         public string name;
         public int count;
-        public float rate;
     }
 
     protected enum SpawnFSM
@@ -52,6 +51,7 @@ public class WaveSpawner : MonoBehaviour
         DoWave();
 
         Debug.Log(spawnMode);
+        Debug.Log(nextWave);
     }
 
     protected void DoWave()
@@ -60,12 +60,10 @@ public class WaveSpawner : MonoBehaviour
         {
             case SpawnFSM.counting:
                 waveCountdown -= Time.deltaTime;
-
                 if (waveCountdown <= 0)
                 {
                     spawnMode = SpawnFSM.spawning;
                 }
-
                 break;
             case SpawnFSM.waiting:
                 if(!EnemyIsAlive())
@@ -78,11 +76,10 @@ public class WaveSpawner : MonoBehaviour
                 }
                 break;
             case SpawnFSM.spawning:
-
-                 if(spawnMode == SpawnFSM.spawning)
-                 {
+                if(spawnMode == SpawnFSM.spawning)
+                {
                     StartCoroutine(SpawnWave(waves[nextWave]));
-                 }
+                }
                 break;
         }
     }
@@ -90,7 +87,9 @@ public class WaveSpawner : MonoBehaviour
     void WaveCompleted()
     {
         Debug.Log("Wave Completed");
-         
+
+        waveCountdown = timeBetweenWaves;
+
         spawnMode = SpawnFSM.counting;
 
         if (nextWave + 1 > waves.Length - 1)
@@ -124,13 +123,10 @@ public class WaveSpawner : MonoBehaviour
     {
         Debug.Log("Spawning Wave: " + _wave.name);
 
-        spawnMode = SpawnFSM.spawning;
-
         //DO SPAWNING
         for(int i = 0; i < _wave.count; i++)
-        {
+        { 
             SpawnEnemy();
-            yield return new WaitForSeconds(1f / _wave.rate);
         }
 
         spawnMode = SpawnFSM.waiting;
