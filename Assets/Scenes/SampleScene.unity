@@ -396,7 +396,7 @@ MonoBehaviour:
   enemiesToPool:
   - objectToPool: {fileID: 7051497701205827446, guid: 14f7d1207706f3040a0a85c04125f740, type: 3}
     amountToPool: 4
-    shouldExpand: 1
+    shouldExpand: 0
   - objectToPool: {fileID: 7051497701205827446, guid: b172673ae618c02408f86821ccd652a2, type: 3}
     amountToPool: 8
     shouldExpand: 0
@@ -434,6 +434,15 @@ MonoBehaviour:
   go_SpawnPointRed: {fileID: 1972418613}
   go_SpawnPointBlue: {fileID: 1162518678}
   go_SpawnPointYellow: {fileID: 662321525}
+  waves:
+  - name: Wave 1
+    count: 1
+    rate: 80
+  - name: Wave 2
+    count: 6
+    rate: 1
+  timeBetweenWaves: 5
+  waveCountdown: 0
 --- !u!1 &1667548216
 GameObject:
   m_ObjectHideFlags: 0
