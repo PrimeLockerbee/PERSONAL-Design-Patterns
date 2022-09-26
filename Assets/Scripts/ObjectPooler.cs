@@ -13,7 +13,6 @@ public class ObjectPoolEnemy
 
 public class ObjectPooler : MonoBehaviour 
 {
-
   public static ObjectPooler SharedInstance;
   public List<ObjectPoolEnemy> enemiesToPool;
   public List<GameObject> pooledObjects;
